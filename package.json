@@ -1,13 +1,16 @@
 {
-  "name": "tuvalum",
-  "version": "0.1.0",
+  "name": "tuvalum-mock-api",
+  "version": "1.0.0",
+  "description": "Tuvalum mock product list api",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.27.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-icons": "^4.3.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -15,8 +18,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start:api": "json-server --watch src/shared/mock/db.json --port 3001",
+    "start:dev": "npm run start:api & npm run start"
   },
+  "author": "MATS",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -34,5 +40,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.5",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "json-server": "^0.15.1",
+    "postcss": "^8.4.12",
+    "sass": "^1.51.0"
   }
 }

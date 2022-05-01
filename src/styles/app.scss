@@ -1,0 +1,18 @@
+@use 'base';
+
+//Home
+@use 'home';
+
+// Components Bikes
+ @use '../components/Grid/grid';
+ @use '../components/BikeCard/bikeCard';
+
+ //Cart Components
+ @use '../components/Cart/cart';
+ @use '../components/CartItem/cartItem';
+ @use '../components/CartMobile/cartMobile';
+ 
+ //Layout Components
+ @use '../components/Navbar/navbar';
+ @use '../components/Footer/footer';
+ 

@@ -1,0 +1,155 @@
+@import '../styles/base/variables.scss';
+@import '../styles/base/mixins.scss';
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: $fontFamilyPrimary;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: $bgColorQuaternary;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://trek.scene7.com/is/image/TrekBicycleProducts/b300_mtbMarqueeImage?$responsive-pjpg$&cache=on,on&wid=1920&hei=1080');
+  height: 64rem;
+  width: 100vw;
+  background-position: right;
+  h1 {
+    color: white;
+    font-family: $fontFamilySecondary;
+    line-height: 7rem;
+    font-size: 6rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    max-width: 75vw;
+  }
+}
+
+.subtitle-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 6rem 0;
+  width: 100vw;
+  hr {
+    background-color: rgba(116, 116, 116, 0.12);
+    border: none;
+    height: 0.02rem;
+    width: 80%;
+  }
+  h2 {
+    color: $fontColorTertiary;
+    font-size: 3rem;
+    letter-spacing: -0.1rem;
+    margin-top: 6rem;
+    text-transform: uppercase;
+  }
+}
+
+.home-grid {
+  display: grid;
+  justify-items: center;
+  align-items: start;
+
+  &__cart {
+    background-color: $btnColor;
+  }
+  &__btn {
+    background-color: $btnColorSecondary;
+    border: none;
+    color: $fontColorQuaternary;
+    justify-content: center;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: lighten($btnColorSecondary, $amount: 30%);
+    }
+  }
+}
+
+@include desktop {
+  .home-grid {
+    grid-template-columns: 0.8fr 0.3fr;
+    gap: 2rem;
+    margin: 0 0.5rem 0 2rem;
+  }
+}
+
+@include tablet {
+  .header {
+    height: 60rem;
+    h1 {
+      font-size: 5rem;
+      line-height: 6rem;
+      max-width: 85vw;
+    }
+  }
+  .home-grid {
+    grid-template-columns: 3fr 1fr;
+    justify-items: stretch;
+    &__btn {
+      margin-left: 2rem;
+      margin-top: 0;
+      padding: 1rem 3rem;
+    }
+    &__btn {
+      margin: auto;
+    }
+  }
+}
+
+@include phone {
+  .header {
+    height: 33rem;
+    h1 {
+      font-size: 3.2rem;
+      line-height: 4rem;
+      margin-top: 5.5rem;
+      max-width: 90vw;
+    }
+  }
+  .home-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 100vw;
+  }
+
+  .subtitle-home {
+    h2 {
+      font-size: 2.2rem;
+      margin: 0;
+      margin-top: 2.2rem;
+    }
+  }
+}

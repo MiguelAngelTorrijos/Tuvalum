@@ -1,0 +1,30 @@
+@import '../../styles/base/variables.scss';
+@import '../../styles/base/mixins';
+
+.grid-bikes {
+  display: grid;
+  justify-content: center;
+}
+
+@include phone {
+  .grid-bikes {
+    grid-row-gap: 1.5rem;
+    margin-left: 0;
+    width: 90vw;
+  }
+}
+
+@include tablet {
+  .grid-bikes {
+    grid-template-columns: 0.45fr 0.45fr;
+    gap: 1.6rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@include desktop {
+  .grid-bikes {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+  }
+}
