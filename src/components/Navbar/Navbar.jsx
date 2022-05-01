@@ -38,13 +38,17 @@ export const Navbar = ({ open, setOpen }) => {
             onClick={handleClick}
             className={
               cart.length > 0
-                ? 'badge navbar__close'
+                ? 'navbar__close'
                 : 'disabled-icon' || open
                 ? 'navbar__close'
                 : 'disabled-icon'
             }
-          />
+          ></BiCartAlt>
         )}
+        <sup hidden={open || !cart.length} className='cart-number'>
+          {cart.length}{' '}
+        </sup>
+
         <FaBars className='navbar__menu' />
       </div>
     </div>

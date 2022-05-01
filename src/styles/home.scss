@@ -38,9 +38,9 @@ p {
   align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('https://trek.scene7.com/is/image/TrekBicycleProducts/b300_mtbMarqueeImage?$responsive-pjpg$&cache=on,on&wid=1920&hei=1080');
+  background-position: right;
   height: 64rem;
   width: 100vw;
-  background-position: right;
   h1 {
     color: white;
     font-family: $fontFamilySecondary;
@@ -131,6 +131,7 @@ p {
 
 @include phone {
   .header {
+    background-size: 100vh;
     height: 33rem;
     h1 {
       font-size: 3.2rem;
