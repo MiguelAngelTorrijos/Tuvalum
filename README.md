@@ -1,7 +1,7 @@
 ## Install dependencies
 
 ```
-$ npm i
+$ npm install
 ```
 
 ## Run the Rest API and APP
